@@ -1,9 +1,12 @@
 import {
   ADD_TO_CART,
+
   REMOVE_FROM_CART,
-  EMPTY_CART,
+
   INCREMENT_QUANTITY,
+
   DECREMENT_QUANTITY,
+  
 } from "./constant";
 
 export const cartData = (data = [], action) => {
@@ -18,17 +21,13 @@ export const cartData = (data = [], action) => {
       console.log("REMOVE_FROM_CART ", action);
       let filterData = data.filter((ele) => ele.id !== action.payload);
       return [...filterData];
-    case EMPTY_CART:
-      // add to car logic
-      console.log("EMPTY_CART ", action);
-      data = [];
-      return [...data];
+
     case INCREMENT_QUANTITY:
       //  Incremtn Quantity
 
       let filterD = data.map((ele) => {
         if (ele.id === action.payload) {
-          return { ...ele, qunty: ele.qunty <10 ? ele.qunty+1 : ele.qunty   };
+          return { ...ele, qunty: ele.qunty < 10 ? ele.qunty + 1 : ele.qunty };
         }
         return ele;
       });
@@ -38,14 +37,13 @@ export const cartData = (data = [], action) => {
       //  decrement quantity
       let filterDec = data.map((ele) => {
         if (ele.id === action.payload) {
-          return { ...ele, qunty: ele.qunty > 1 ? ele.qunty-1 : ele.qunty   };
+          return { ...ele, qunty: ele.qunty > 1 ? ele.qunty - 1 : ele.qunty };
         }
         return ele;
       });
 
       return [...filterDec];
 
-      return [...data];
     default:
       // no case matched
       return data;
