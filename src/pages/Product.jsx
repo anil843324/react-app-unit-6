@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 
 
@@ -8,9 +8,13 @@ import { useEffect, useState } from "react";
 const Product = () => {
   const [singleData, setSingleData] = useState({});
 
+   const [toggle,setToggle]=useState(false)
+   
   const { id } = useParams();
 
-  const dispatch = useDispatch();
+  const cartData = useSelector((state) => state.cartData);
+
+
 
    const navigate=useNavigate()
 
@@ -21,15 +25,13 @@ const Product = () => {
 
         setSingleData(data);
 
-        console.log(data);
+        // console.log(data);
       });
    
   }, [id]);
 // add to cart Data 
 
 function handleAddToCart() {
-  
- 
     fetch("http://localhost:8080/cart", {
       method: "POST",
       headers: {
@@ -48,23 +50,15 @@ function handleAddToCart() {
       
     })
       .then(()=>{
-        // dispatch(getTodoItems());
-        /*
- {
-      "id": 40,
-      "brand": "Tied Ribbons",
-      "title": "Set of 3 Owl",
-      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/12/15/777efffd-ccf5-42c9-b20f-5630d360b57f1576371164101-1.jpg",
-      "price": 1299,
-      "category": "homedecor"
-    }
-        */
+  
       })
     
       alert('Product added to cart')
 }
 
 
+//  checking data in cart avilable or not
+   
 
  
 
@@ -110,20 +104,21 @@ function handleAddToCart() {
             </div>
           
             <div className=" border-[rgb(128,128,128,128)] mx-10 flex justify-center  gap-2">
-              <button
-                  onClick={handleAddToCart}
-                className="my-4  w-[100%] md:w-[30%] text-white  "
-              >
-                Add to Cart
-              </button>
 
-              <button
+            {
+              toggle ? <>  <button
                 onClick={() =>  navigate('/cart')}
                 className="my-4  w-[100%] md:w-[30%] text-white  "
               >
                 Go to Cart Go 
-              </button>
-
+              </button></> : <><button
+                  onClick={handleAddToCart}
+                className="my-4  w-[100%] md:w-[30%] text-white  "
+              >
+                Add to Cart
+              </button></>
+            }
+            
               <button
                
                  onClick={() =>  navigate('/')}

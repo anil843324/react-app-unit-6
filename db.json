@@ -307,34 +307,14 @@
   ],
   "cart": [
     {
-      "brand": "Van Heusen",
-      "title": "Regukar Fit Printed Shirt",
-      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/2164551/2019/3/12/45950906-09a8-4e72-9717-16448ce161a41552375230864-Roadster-Men-Grey--Olive-Green-Camouflage-Print-Regular-Fit--1.jpg",
+      "brand": "Roadster",
+      "title": "cotton Checked Casual Shirt",
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1376577/2016/9/15/11473928353466-Roadster-Men-Black-Regular-Fit-Checked-Casual-Shirt-4501473928353310-1.jpg",
       "price": 844,
       "category": "men",
-      "product_id": 3,
+      "product_id": 1,
       "quantity": 1,
       "id": 1
-    },
-    {
-      "brand": "Van Heusen",
-      "title": "Regukar Fit Printed Shirt",
-      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/2164551/2019/3/12/45950906-09a8-4e72-9717-16448ce161a41552375230864-Roadster-Men-Grey--Olive-Green-Camouflage-Print-Regular-Fit--1.jpg",
-      "price": 844,
-      "category": "men",
-      "product_id": 3,
-      "quantity": 1,
-      "id": 2
-    },
-    {
-      "brand": "Anouk",
-      "title": "Men Linen Regular Fit",
-      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/6791214/2018/7/23/a194bd48-f1f1-4ce5-ab73-5feea12857f51532336453194-Roadster-Men-Blue-Regular-Fit-Solid-Casual-Shirt-89615323364-1.jpg",
-      "price": 1099,
-      "category": "men",
-      "product_id": 11,
-      "quantity": 1,
-      "id": 3
     }
   ]
 }
