@@ -1,6 +1,14 @@
 import { ADD_TO_CART } from "./constant";
-import { REMOVE_FROM_CART ,INCREMENT_QUANTITY,DECREMENT_QUANTITY } from "./constant";
+import { REMOVE_FROM_CART ,INCREMENT_QUANTITY,DECREMENT_QUANTITY, CART_LIST } from "./constant";
 
+
+
+// fetching data to cart
+export const cartList = () => {
+  return {
+    type: CART_LIST,
+  };
+};
 
 export const addToCart = (data) => {
   console.log("action called", data);

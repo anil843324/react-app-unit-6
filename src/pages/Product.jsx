@@ -27,37 +27,41 @@ const Product = () => {
   }, [id]);
 // add to cart Data 
 
-// var jsonData = {
-//   "users": [
-//       {
-//           "name": "alan", 
-//           "age": 23,
-//           "username": "aturing"
-//       },
-//       {
-//           "name": "john", 
-//           "age": 29,
-//           "username": "__john__"
-//       }
-//   ]
-// }
-
 function handleAddToCart() {
   
-  // fetch('http://localhost:8080/cart ', {  // Enter your IP address here
+ 
+    fetch("http://localhost:8080/cart", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify( {
+        "brand":singleData.brand,
+        "title":singleData.title,
+        "image":singleData.image,
+        "price":singleData.price,
+        "category":singleData.category,
+        "product_id": singleData.id,
+        "quantity": 1,
 
-  //   method: 'POST', 
-  //   mode: 'cors', 
-  //   body: JSON.stringify(singleData) // body data type must match "Content-Type" header
-
-  // })
-
-
-  fetch.post('http://localhost:8080/cart',JSON.stringify(singleData) ).then(resp => {
-    console.log(resp.data);
-}).catch(error => {
-    console.log(error);
-});
+      })
+      
+    })
+      .then(()=>{
+        // dispatch(getTodoItems());
+        /*
+ {
+      "id": 40,
+      "brand": "Tied Ribbons",
+      "title": "Set of 3 Owl",
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/12/15/777efffd-ccf5-42c9-b20f-5630d360b57f1576371164101-1.jpg",
+      "price": 1299,
+      "category": "homedecor"
+    }
+        */
+      })
+    
+      alert('Product added to cart')
 }
 
 
@@ -107,7 +111,7 @@ function handleAddToCart() {
           
             <div className=" border-[rgb(128,128,128,128)] mx-10 flex justify-center  gap-2">
               <button
-                  onClick={() => handleAddToCart}
+                  onClick={handleAddToCart}
                 className="my-4  w-[100%] md:w-[30%] text-white  "
               >
                 Add to Cart

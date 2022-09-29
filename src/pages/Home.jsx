@@ -2,12 +2,12 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { productList } from "../redux/productAction";
 import { useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const dispatch = useDispatch();
 
-   const navigate=useNavigate()
+  
   const data = useSelector((state) => state.productData);
 
   console.log("Data in Main Component from saga", data);

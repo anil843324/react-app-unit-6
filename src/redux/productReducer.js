@@ -3,7 +3,7 @@ import { SET_PRODUCT_LIST } from "./constant";
 export const productData = (data = [], action) => {
   switch (action.type) {
     case SET_PRODUCT_LIST:
-      // add to car logic
+      // add to product data logic
       console.log("Product list ", action);
       return [...action.data];
 
@@ -12,3 +12,4 @@ export const productData = (data = [], action) => {
       return data;
   }
 };
+
