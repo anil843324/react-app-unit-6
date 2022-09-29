@@ -315,26 +315,6 @@
       "product_id": 4,
       "quantity": 1,
       "id": 1
-    },
-    {
-      "brand": "Blackberry's",
-      "title": "Regukar Fit Printed Shirt",
-      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/10944602/2020/3/5/da4c1a83-987b-4afa-baad-f72039dbdedb1583385686526-Roadster-Men-Teal-Blue--Black-Regular-Fit-Printed-Casual-Shi-4.jpg",
-      "price": 699,
-      "category": "men",
-      "product_id": 2,
-      "quantity": 1,
-      "id": 2
-    },
-    {
-      "brand": "Anouk",
-      "title": "Men Linen Regular Fit",
-      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/6791214/2018/7/23/a194bd48-f1f1-4ce5-ab73-5feea12857f51532336453194-Roadster-Men-Blue-Regular-Fit-Solid-Casual-Shirt-89615323364-1.jpg",
-      "price": 1099,
-      "category": "men",
-      "product_id": 11,
-      "quantity": 1,
-      "id": 3
     }
   ]
 }
