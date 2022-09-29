@@ -20,18 +20,18 @@ export const removeFromCart = (id) => {
 };
 
 
-export const incrementQuantity = (id) => {
+export const incrementQuantity = (id,obj) => {
  
   return {
     type: INCREMENT_QUANTITY,
-    payload: id,
+    payload: {id,obj},
   };
 };
 
-export const decrementQuantity = (id) => {
-  
+export const decrementQuantity = (id,obj) => {
+    
   return {
     type: DECREMENT_QUANTITY,
-    payload: id,
+    payload: {id,obj},
   };
 };

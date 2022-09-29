@@ -13,23 +13,24 @@ export const cartData = (data = [], action) => {
       return data;
       case INCREMENT_QUANTITY:
         // Incremtn quantity
-      fetch(`http://localhost:8080/cart/${action.payload}`,{
-        method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify( )
-      })
+        fetch(`http://localhost:8080/cart/${action.payload.id}`,{
+          method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({...action.payload.obj, quantity:action.payload.obj.quantity < 10 ? action.payload.obj.quantity +1 : action.payload.obj.quantity    } )
+        })
       return data;
       case DECREMENT_QUANTITY:
         // decrement quantity
-        fetch(`http://localhost:8080/cart/${action.payload}`,{
+        fetch(`http://localhost:8080/cart/${action.payload.id}`,{
         method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify( )
+      body: JSON.stringify({...action.payload.obj, quantity:action.payload.obj.quantity > 1 ? action.payload.obj.quantity -1 : action.payload.obj.quantity    } )
       })
+        
       return data;
     default:
       // no case matched
