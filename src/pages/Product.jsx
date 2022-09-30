@@ -1,6 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
+import { cartList } from "../redux/cartAction";
 
 
 
@@ -8,6 +9,7 @@ import { useEffect, useState } from "react";
 const Product = () => {
   const [singleData, setSingleData] = useState({});
 
+   const dispatch=useDispatch();
    const [toggle,setToggle]=useState(false)
    
   const { id } = useParams();
@@ -54,11 +56,36 @@ function handleAddToCart() {
       })
     
       alert('Product added to cart')
+      dispatch(cartList());
 }
 
 
+
+
 //  checking data in cart avilable or not
+useEffect(() => {
+  dispatch(cartList());
+}, []);
+
+  // console.log('cart from  product', cartData)
    
+  useEffect(()=>{
+
+  cartData.forEach((el)=>{
+    if( Number(el.product_id)=== Number(id) ) {
+       setToggle(true);    
+       return ;
+    }else{
+     setToggle(false);
+      return ;
+    }
+ })
+
+
+  })
+
+
+ 
 
  
 

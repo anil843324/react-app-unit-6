@@ -307,13 +307,13 @@
   ],
   "cart": [
     {
-      "brand": "Roadster",
-      "title": "cotton Checked Casual Shirt",
-      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1376577/2016/9/15/11473928353466-Roadster-Men-Black-Regular-Fit-Checked-Casual-Shirt-4501473928353310-1.jpg",
-      "price": 844,
+      "brand": "Blackberry's",
+      "title": "Regukar Fit Printed Shirt",
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/10944602/2020/3/5/da4c1a83-987b-4afa-baad-f72039dbdedb1583385686526-Roadster-Men-Teal-Blue--Black-Regular-Fit-Printed-Casual-Shi-4.jpg",
+      "price": 699,
       "category": "men",
-      "product_id": 1,
-      "quantity": 1,
+      "product_id": 2,
+      "quantity": 7,
       "id": 1
     }
   ]
